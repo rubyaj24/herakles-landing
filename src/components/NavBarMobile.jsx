@@ -1,5 +1,6 @@
 import '../index.css';
 import { useState } from 'react';
+import Logo from '/logo.svg';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
@@ -32,7 +33,7 @@ const NavBarMobile = () => {
           MENU
         </button>
         <Link to="/" className="flex items-center">
-          <img src="/logo.svg" alt="Logo" className="h-[15vh]" aria-label='Logo' />
+          <img src={Logo} alt="Logo" className="h-[15vh]" aria-label='Logo' />
         </Link>
         <div className="w-12"></div> {/* Spacer for centering logo */}
       </nav>

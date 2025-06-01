@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Logo from '/logo.svg';
 
 const NavBar = () => {
 
@@ -17,7 +18,7 @@ const NavBar = () => {
   return (
     <nav className='flex z-10 bg-gradient-to-b from-black/100 via-black/80 to-black/0 text-white px-6 items-center justify-between m-auto'>
         <Link to="/">
-            <img src="/logo.svg" alt="Logo" className="h-30" />
+            <img src={Logo} alt="Logo" className="h-30" />
         </Link>
         <ul className='flex space-x-4 p-6 gap-10'>
             {menuItems.map((items, index) => (
