@@ -1,4 +1,4 @@
-import HeroSection from '../components/hEROsECTION.JSX'
+import HeroSection from '../components/HeroSection.jsx'
 import About from '../components/About.jsx'
 import College from '../components/College.jsx'
 import Team from '../components/Team.jsx'
