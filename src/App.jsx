@@ -56,6 +56,7 @@ const AppContent = () => {
           <Route path='/merchandise' element={<Merchandise />} />
           <Route path='/history' element={<History />} />
           <Route path='/team' element={<TeamPage />} />
+          <Route path='*' element={<HomePage />} />
         </Routes>
       </main>
       <section id='contact'>
@@ -84,7 +85,7 @@ const App = () => {
   }
 
   return (
-    <Router>
+    <Router basename="/herakles-landing">
       <AppContent />
     </Router>
   );
