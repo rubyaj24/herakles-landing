@@ -6,9 +6,7 @@ import mbaja from '../assets/m-baja.JPG'
 const History = () => {
 
   useEffect(() => {
-          setTimeout(() => {
-              document.title = "History | Herakles CET";
-          }, 1000);
+          document.title = "History | Herakles CET";
           window.scrollTo({ top: 0, behavior: 'smooth' });
       }, []);
 

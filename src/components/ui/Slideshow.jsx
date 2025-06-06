@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { MdOutlineArrowForwardIos, MdOutlineArrowBackIosNew } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
@@ -44,11 +44,11 @@ const Slideshow = ({ slides }) => {
                             index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
                         }`}
                         style={{ backgroundImage: `url(${slide.image})`,
-                            borderRadius: '0 0 20px 20px',
+                            borderRadius: '10px'
                          }}
                     >
                         {/* Gradient Overlay */}
-                        <div className="absolute inset-0 lg:bg-gradient-to-l bg-gradient-to-b from-black/10 to-black/100 z-10"></div>
+                        <div className="absolute inset-0 lg:bg-gradient-to-l bg-gradient-to-b from-black/10 to-black/100 z-10 rounded-lg"></div>
                         
                         {/* Content Section */}
                         <div className="relative z-20 flex flex-col justify-end lg:justify-center lg:items-start items-center lg:w-1/2 w-full h-full gap-4 lg:ml-10 px-6 pb-32 lg:pb-0">

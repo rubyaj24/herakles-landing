@@ -8,15 +8,14 @@ import Banner1 from '.././assets/banner1.jpg';
 import Banner2 from '.././assets/e-baja.png';
 import Banner3 from '.././assets/1.png';
 import Sponsors from '../components/Sponsors.jsx';
+import Vehicles from '../components/Vehicles.jsx';
 
 const HomePage = () => {
 
   useEffect(() => {
-            setTimeout(() => {
-                document.title = "Home | Herakles CET";
-            }, 1000);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, []);
+      document.title = "Home | Herakles CET";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   return (
     <>
@@ -43,20 +42,24 @@ const HomePage = () => {
         ]} />
       </section>
 
-      <section id='about' className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
+      {/* <section id='about' className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <About />
-      </section>
+      </section> */}
 
-      <section id='college' className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
+      {/* <section id='college' className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <College />
-      </section>
+      </section> */}
 
-      <section id='team' className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
+      <div className='flex flex-col items-center justify-center gap-4 my-6 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]'>
+        <Vehicles />
+      </div>
+
+      <div className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <Team />
-      </section>
-      <section id='team' className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
+      </div>
+      <div className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <Sponsors />
-      </section>
+      </div>
     </>
   )
 }
