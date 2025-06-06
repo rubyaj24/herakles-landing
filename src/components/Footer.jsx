@@ -34,9 +34,11 @@ const Footer = () => {
     ];
 
     const pages = [
-        { name: 'HOME', to: 'home' },
-        { name: 'ABOUT', to: 'about' },
-        { name: 'TEAM', to: 'team' }
+        { name: 'HOME', to: '/herakles-landing/home' },
+        { name: 'ABOUT', to: '/herakles-landing/about' },
+        { name: 'TEAM', to: '/herakles-landing/team' },
+        { name: 'HISTORY', to: '/herakles-landing/history' },
+        { name: 'MERCHANDISE', to: '/herakles-landing/merchandise' }
     ];
 
     return (
@@ -49,7 +51,8 @@ const Footer = () => {
                 <p>695016</p>
                 <p>Trivandrum</p>
                 <p>India</p>
-                <p className='flex items-center mt-4'><BsTelephoneFill className='mr-2' /><a href="tel:+919656477870">+919656477870</a></p>
+                <p className='flex items-center mt-4'><BsTelephoneFill className='mr-2' /><a href="tel:+919400827091">+91 94008 27091</a></p>
+                <p className='flex items-center'><BsTelephoneFill className='mr-2' /><a href="tel:+917034721402">+91 70347 21402</a></p>
                 <p className='flex items-center'><CgMail className='mr-2' /><a href="mailto:heraklescet@gmail.com">heraklescet@gmail.com</a></p>
             </div>
             {/* Tabs */}
@@ -57,7 +60,7 @@ const Footer = () => {
                 <ul className="flex flex-col md:flex-row">
                     {pages.map((page, index) => (
                         <li className="my-2 md:my-0" key={index}>
-                            <a href={`#${page.to}`} className="px-4 py-2 uppercase font-medium hover:text-gray-300 transition-colors">
+                            <a href={`${page.to}`} className="px-4 py-2 uppercase font-medium hover:text-gray-300 transition-colors">
                                 {page.name}
                             </a>
                         </li>

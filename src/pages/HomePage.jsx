@@ -12,7 +12,7 @@ const HomePage = () => {
 
   useEffect(() => {
             setTimeout(() => {
-                document.title = "History | Herakles CET";
+                document.title = "Home | Herakles CET";
             }, 1000);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }, []);

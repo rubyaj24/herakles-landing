@@ -43,7 +43,9 @@ const Slideshow = ({ slides }) => {
                         className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-500 ${
                             index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
                         }`}
-                        style={{ backgroundImage: `url(${slide.image})` }}
+                        style={{ backgroundImage: `url(${slide.image})`,
+                            borderRadius: '0 0 20px 20px',
+                         }}
                     >
                         {/* Gradient Overlay */}
                         <div className="absolute inset-0 lg:bg-gradient-to-l bg-gradient-to-b from-black/10 to-black/100 z-10"></div>

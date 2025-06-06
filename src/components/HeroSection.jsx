@@ -6,7 +6,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
     const handleCTA = () => {
-        navigate('/history');
+        navigate('/herakles-landing/history');
     };
 
   return (

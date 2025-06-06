@@ -36,6 +36,8 @@ const History = () => {
         of excellence, resilience, and purposeful innovation — across every terrain, and through every evolution.</p>
       <img src='https://placehold.co/600x400' alt='Historical Image' className='w-full h-64 object-cover rounded-lg mb-6' />
       <p className='hidden my-4 leading-relaxed'>Join us as we look back at our milestones, the evolution of our designs, and the spirit that drives us forward.</p>
+
+      {/* M_BAJA */}
       <h2 className='text-3xl font-semibold my-6'>The Genesis of Grit</h2>
       <p className='my-4 leading-relaxed'>
         Our journey began in SAE BAJA 2019, under the mBAJA category — our first national appearance. Even as newcomers, we made our mark with an audacious spirit and 
@@ -61,10 +63,12 @@ const History = () => {
         <li className='my-2'>•	12th – All Terrain</li>
         <li className='my-2'>•	AIR 29 overall | Kerala Rank 1</li>
       </ul>
-
       <p className='my-4 leading-relaxed'>But even in that moment of triumph, we saw beyond it. 
         We understood that the future of mobility wasn't just about speed and control — it was about responsibility. 
         In that same year, we took a bold step forward.</p>
+
+
+      {/* E-BAJA */}
       <h2 className='text-3xl font-semibold my-6'>Igniting a New Current</h2>
       <img src= {ebaja} alt='eBAJA Prototype' className='w-full object-cover rounded-lg mb-6' />
       <p className='my-4 leading-relaxed'>Still under SAE BAJA 2021, Herakles Racing shifted into 
@@ -100,7 +104,10 @@ const History = () => {
       <p className='my-4 leading-relaxed'>The 2024 edition marked a turning point. It was the year we stood 
         shoulder to shoulder with the best — not just as a team from Kerala or as students from CET, but as 
         engineers leading India’s electric off-road frontier.</p>
-      <h2 className='text-3xl font-semibold my-6'>The Road Ahead</h2>
+
+
+      {/* H-BAJA */}
+      <h2 className='text-3xl font-semibold my-6'>Beyond the Horizon</h2>
       <img src='https://placehold.co/600x400' alt='Future Vision' className='w-full h-64 object-cover rounded-lg mb-6' />
       <p className='my-4 leading-relaxed'>But true innovation never settles. The next frontier was already in sight — 
         and it wasn’t electric. It was cleaner, more powerful, and far more complex. In 2025, Herakles Racing entered 
