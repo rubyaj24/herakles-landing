@@ -7,12 +7,14 @@ import alethea from '../assets/sponsors/alethea-logo.jpg'
 import bmw from '../assets/sponsors/bmw-logo.jpg'
 import aptglobal from '../assets/sponsors/aptglobal-logo.jpg'
 import mindpetal from '../assets/sponsors/mindpetal-logo.jpg'
+import cetaa from '../assets/sponsors/cetaa-logo.jpg'
 
 // Bmw,CETAA, MINDPETAL, mvd ,ksidc, apt global, althea, c2m , Altair, solidworks,ansys, indianoil,indian coil
 
 const Sponsors = () => {
 
   const sponsors = [
+    cetaa,
     bmw,
     mindpetal,
     mvd,
@@ -29,7 +31,7 @@ const Sponsors = () => {
             <h2 className="text-2xl font-bold mt-6">Our Sponsors</h2>
             <div className="flex flex-wrap justify-center items-center mt-4">
                 {sponsors.map((sponsor, index) => (
-                    <img key={index} src={sponsor} alt={`Sponsor ${index + 1}`} className="h-32 m-2" />
+                    <img key={index} src={sponsor} alt={`Sponsor ${index + 1}`} className="h-32 m-2 p-2 gap-2" />
                 ))}
             </div>
         </div>
