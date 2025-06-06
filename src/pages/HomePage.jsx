@@ -9,6 +9,7 @@ import Banner2 from '.././assets/e-baja.png';
 import Banner3 from '.././assets/1.png';
 import Sponsors from '../components/Sponsors.jsx';
 import Vehicles from '../components/Vehicles.jsx';
+import News from '../components/News.jsx';
 
 const HomePage = () => {
 
@@ -55,8 +56,13 @@ const HomePage = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
+        <News />
+      </div>
+
+      <div className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <Team />
       </div>
+
       <div className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <Sponsors />
       </div>

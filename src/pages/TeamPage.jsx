@@ -1,3 +1,7 @@
+import founder from "../assets/members/founders/safwan-abdul.jpg"
+import sanjaykutty from "../assets/members/founders/sanjay-kutty.jpg"
+import vishnu from "../assets/members/founders/vishnu-cs.jpg"
+import varun from "../assets/members/founders/varun-venugopal.jpg"
 import { useEffect } from "react";
 
 const TeamPage = () => {
@@ -10,22 +14,27 @@ const TeamPage = () => {
     }, []);
 
     const founders = [
-        {
-        name: 'John Doe',
-        role: 'Team Leader',
-        image: 'https://placehold.co/150'
-        },
-        {
-        name: 'Jane Smith',
-        role: 'Technical Lead',
-        image: 'https://placehold.co/150'
-        },
-        {
-        name: 'Alice Johnson',
-        role: 'Design Lead',
-        image: 'https://placehold.co/150'
-        }
-    ];
+            {
+                name: "Safwan Abdul",
+                role: "Founder",
+                image: founder
+            },
+            {
+                name: "Vishnu CS",
+                role: "Co-Founder",
+                image: vishnu
+            },
+            {
+                name: "Varun Venugopal",
+                role: "Co-Founder",
+                image: varun
+            },
+            {
+                name: "Sanjay K Kutty",
+                role: "Co-Founder",
+                image: sanjaykutty
+            }
+        ]
 
     const mentors = [
         {
@@ -51,8 +60,8 @@ const TeamPage = () => {
         <h2 className="text-2xl text-center my-4">Founders</h2>
         <div className="flex flex-wrap gap-10 px-4 w-full justify-center space-around mx-auto">
             {founders.map((founder, index) => (
-                <div key={index} className="border p-4 rounded-lg w-min-150">
-                    <img src={founder.image} alt={founder.name} className="w-full h-32 object-cover rounded-md" />
+                <div key={index} className="border p-4 rounded-lg">
+                    <img src={founder.image} alt={founder.name} className="h-100 object-cover rounded-md" />
                     <h3 className="text-xl font-semibold mt-2">{founder.name}</h3>
                     <p className="text-gray-600">{founder.role}</p>
                 </div>
