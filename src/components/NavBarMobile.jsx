@@ -31,7 +31,7 @@ const NavBarMobile = () => {
 
   return (
     <>
-      <nav className="flex z-30 bg-gradient-to-b from-black/100 via-black/80 to-black/0 text-white px-6 py-4 items-center justify-between relative">
+      <nav className="flex z-30 bg-gradient-to-b from-black/100 via-black/80 to-black/0 text-white px-6 items-center justify-between relative">
         <button 
           className="text-sm font-medium hover:text-red-500 hover:scale-110  transition-all duration-300"
           aria-label="Toggle Menu" 
