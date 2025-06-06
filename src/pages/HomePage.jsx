@@ -7,6 +7,7 @@ import Slideshow from '../components/ui/Slideshow.jsx'
 import Banner1 from '.././assets/banner1.jpg';
 import Banner2 from '.././assets/e-baja.png';
 import Banner3 from '.././assets/1.png';
+import Sponsors from '../components/Sponsors.jsx';
 
 const HomePage = () => {
 
@@ -52,6 +53,9 @@ const HomePage = () => {
 
       <section id='team' className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <Team />
+      </section>
+      <section id='team' className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
+        <Sponsors />
       </section>
     </>
   )

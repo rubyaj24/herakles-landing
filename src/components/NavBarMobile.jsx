@@ -1,14 +1,21 @@
 import '../index.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Logo from '/logo.svg';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const NavBarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleCartClick = () => {
+    navigate('/merchandise');
   };
 
   const menuItems = [
@@ -34,8 +41,9 @@ const NavBarMobile = () => {
         </button>
         <Link to="/" className="flex items-center">
           <img src={Logo} alt="Logo" className="h-[15vh]" aria-label='Logo' />
-        </Link>
-        <div className="w-12"></div> {/* Spacer for centering logo */}
+        </Link>{/* Spacer for centering logo */}
+        <FaShoppingCart className="text-white hover:text-red-500 hover:scale-110 transition-all duration-300"
+        onClick={handleCartClick} />
       </nav>
 
       {/* Overlay */}
