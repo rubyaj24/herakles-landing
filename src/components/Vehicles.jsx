@@ -15,12 +15,12 @@ const Vehicles = () => {
 
     const models = [
         {
-            id: 1,
-            name: "M Baja",
-            image: mbaja,
-            description: "Powerful mechanical beast engineered for extreme terrains and unmatched performance.",
-            color: "red",
-            action : "/products/m-baja"
+            id: 3,
+            name: "H Baja",
+            image: hbaja,
+            description: "Hybrid technology combining the best of electric and mechanical power systems.",
+            color: "green",
+            action : "/products/h-baja"
         },
         {
             id: 2,
@@ -31,13 +31,14 @@ const Vehicles = () => {
             action : "/products/e-baja"
         },
         {
-            id: 3,
-            name: "H Baja",
-            image: hbaja,
-            description: "Hybrid technology combining the best of electric and mechanical power systems.",
-            color: "green",
-            action : "/products/h-baja"
-        }
+            id: 1,
+            name: "M Baja",
+            image: mbaja,
+            description: "Powerful mechanical beast engineered for extreme terrains and unmatched performance.",
+            color: "red",
+            action : "/products/m-baja"
+        },
+        
     ]
 
     const getHoverColors = (color) => {
