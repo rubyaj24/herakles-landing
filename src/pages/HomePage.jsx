@@ -55,15 +55,15 @@ const HomePage = () => {
         <Vehicles />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
+      <div className="flex flex-col items-center justify-center gap-4 m-6 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <News />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
+      <div className="flex flex-col items-center justify-center gap-4 m-6 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <Team />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
+      <div className="flex flex-col items-center justify-center gap-4 m-6 border-2 px-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
         <Sponsors />
       </div>
     </>
