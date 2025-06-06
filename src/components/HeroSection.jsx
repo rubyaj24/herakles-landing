@@ -1,7 +1,14 @@
 import Banner1 from '.././assets/banner1.jpg';
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+    const handleCTA = () => {
+        navigate('/history');
+    };
+
   return (
     <div className="relative flex flex-col lg:flex-row items-center w-full h-[95vh]">
       {/* Background Image */}
@@ -24,7 +31,7 @@ const HeroSection = () => {
         </p>
 
         {/* CTA Button */}
-        <div className="group flex items-center gap-2 cursor-pointer transition-all duration-300 hover:scale-105">
+        <div className="group flex items-center gap-2 cursor-pointer transition-all duration-300 hover:scale-105" onClick={handleCTA}>
           <h3 className="text-gray-300 text-md lg:text-xl font-medium p-2 group-hover:text-red-500">
             LEARN MORE
           </h3>

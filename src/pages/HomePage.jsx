@@ -6,7 +6,7 @@ import Team from '../components/Team.jsx'
 const HomePage = () => {
   return (
     <>
-      <section id='home' className="flex flex-col items-center justify-center animate-fade-in mx-6 border-2 rounded-lg border-gray-300 shadow-lg overflow-hidden">
+      <section id='home' className="flex flex-col items-center justify-center lg:mt-30 animate-fade-in mx-6 border-2 rounded-lg border-gray-300 shadow-lg overflow-hidden">
         <HeroSection />
       </section>
       
