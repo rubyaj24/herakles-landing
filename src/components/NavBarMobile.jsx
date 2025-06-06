@@ -12,7 +12,7 @@ const NavBarMobile = () => {
   };
 
   const menuItems = [
-    {'name':'HOME', 'to':'/home'},
+    {'name':'HOME', 'to':'/'},
     {'name':'ABOUT', 'to':'/about'},
     {'name':'TEAM', 'to':'/team'},
     {'name':'NEWS', 'to':'/news'},

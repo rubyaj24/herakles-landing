@@ -4,7 +4,7 @@ import Logo from '/logo.svg';
 const NavBar = () => {
 
     const menuItems = [
-    {'name':'HOME', 'to':'/home'},
+    {'name':'HOME', 'to':'/'},
     {'name':'ABOUT', 'to':'/about'},
     {'name':'COLLEGE', 'to':'/college'},
     {'name':'TEAM', 'to':'/team'},
