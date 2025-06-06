@@ -1,4 +1,4 @@
-import logo from '/logo.svg' // Or use a proper loader asset
+import logo from '/logo.svg'
 import '../App.css'
 
 const Loader = () => {

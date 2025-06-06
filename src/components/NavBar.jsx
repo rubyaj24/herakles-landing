@@ -23,9 +23,9 @@ const NavBar = () => {
         <ul className='flex space-x-4 p-6 gap-10'>
             {menuItems.map((items, index) => (
                 <li key={index}>
-                    <a href={`#${items.to}`} className='text-sm font-medium scroll-smooth hover:text-red-500 hover:scale-110 transition-all duration-300'>
+                    <Link to={`#${items.to}`} className='text-sm font-medium scroll-smooth hover:text-red-500 hover:scale-110 transition-all duration-300'>
                         {items.name}
-                    </a>
+                    </Link>
                 </li>
             ))}
         </ul>

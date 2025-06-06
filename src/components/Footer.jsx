@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaFacebookSquare, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaXTwitter } from 'react-icons/fa6';

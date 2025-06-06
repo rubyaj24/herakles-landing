@@ -58,6 +58,7 @@ const TeamPage = () => {
                 </div>
             ))}
         </div>
+        <hr className="my-10 border-gray-300" />
         <h2 className='text-2xl text-center my-4'>Mentors</h2>
         <div className="flex flex-wrap gap-10 px-4 w-full justify-center space-around mx-auto">
             {mentors.map((mentor, index) => (

@@ -1,10 +1,8 @@
-import React from 'react'
-
 const About = () => {
   return (
     <div>
         <h1 className="text-4xl text-center my-8">OUR COLLEGE</h1>
-        <p className='px-4 leading-relaxed'>
+        <p className='p-4 leading-relaxed'>
 College of Engineering Trivandrum (CET) is one of the oldest, 
 most reputed and also top ranked engineering college of the state of Kerala. 
 Since its inception in 1939, the college has grown dynamically, 

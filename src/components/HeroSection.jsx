@@ -3,7 +3,7 @@ import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 const HeroSection = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row items-center w-full h-screen overflow-hidden">
+    <div className="relative flex flex-col lg:flex-row items-center w-full h-[95vh]">
       {/* Background Image */}
       <img
         src={Banner1}

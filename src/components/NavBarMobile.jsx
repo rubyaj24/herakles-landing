@@ -12,14 +12,14 @@ const NavBarMobile = () => {
   };
 
   const menuItems = [
-    {'name':'HOME', 'to':'home'},
-    {'name':'ABOUT', 'to':'about'},
-    {'name':'TEAM', 'to':'team'},
-    {'name':'NEWS', 'to':'news'},
-    {'name':'GALLERY', 'to':'gallery'},
-    {'name':'HISTORY', 'to':'history'},
-    {'name':'PARTNERS', 'to':'partners'},
-    {'name':'CONTACT', 'to':'contact'}
+    {'name':'HOME', 'to':'/home'},
+    {'name':'ABOUT', 'to':'/about'},
+    {'name':'TEAM', 'to':'/team'},
+    {'name':'NEWS', 'to':'/news'},
+    {'name':'GALLERY', 'to':'/gallery'},
+    {'name':'HISTORY', 'to':'/history'},
+    {'name':'PARTNERS', 'to':'/partners'},
+    {'name':'CONTACT', 'to':'/contact'}
   ];
 
   return (
@@ -62,13 +62,13 @@ const NavBarMobile = () => {
         <ul className="p-6 space-y-4">
           {menuItems.map((item, index) => (
             <li key={index}>
-              <a 
-                href={`#${item.to}`}
+              <Link
+                to={item.to}
                 className="block text-white hover:text-gray-300 py-2 px-2 text-lg font-medium hover:bg-gray-800 rounded-lg hover:scale-110 transition-all duration-300"
                 onClick={toggleMenu}
               >
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
