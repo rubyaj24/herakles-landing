@@ -35,12 +35,12 @@ const Slideshow = ({ slides }) => {
     };
 
     return (
-        <div className="relative w-full h-[90vh]">
+        <div className="relative w-full lg:h-[85vh] h-[90vh]">
             <div className="h-full w-full">
                 {slides.map((slide, index) => (
                     <div
                         key={index}
-                        className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-500 ${
+                        className={`absolute top-0 left-0 w-full h-full bg-cover bg-center rounded-sm transition-opacity duration-500 ${
                             index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
                         }`}
                         style={{ backgroundImage: `url(${slide.image})`,

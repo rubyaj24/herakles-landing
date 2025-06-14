@@ -1,29 +1,33 @@
-import ksidclogo from '../assets/sponsors/ksidc-logo.jpg'
+import ksidclogo from '../assets/sponsors/ksidc.webp'
 import indianoil from '../assets/sponsors/indian-oil-logo.jpg'
-import mvd from '../assets/sponsors/mvd-logo.png'
+import mvd from '../assets/sponsors/mvd.webp'
 import indcoil from '../assets/sponsors/indcoil-logo.jpg'
 import solidworks from '../assets/sponsors/solidworks-logo.jpg'
 import alethea from '../assets/sponsors/alethea-logo.jpg'
-import bmw from '../assets/sponsors/bmw-logo.jpg'
-import aptglobal from '../assets/sponsors/aptglobal-logo.jpg'
-import mindpetal from '../assets/sponsors/mindpetal-logo.jpg'
-import cetaa from '../assets/sponsors/cetaa-logo.jpg'
+import bmw from '../assets/sponsors/bmw.webp'
+import aptglobal from '../assets/sponsors/apt.webp'
+import mindpetal from '../assets/sponsors/Mindpetal.webp'
+import cetaa from '../assets/sponsors/cetaa.webp'
+import altair from '../assets/sponsors/altair.webp'
+import logo from '../assets/sponsors/logo.jpg';
 
 // Bmw,CETAA, MINDPETAL, mvd ,ksidc, apt global, althea, c2m , Altair, solidworks,ansys, indianoil,indian coil
 
 const Sponsors = () => {
 
   const sponsors = [
-    cetaa,
     bmw,
+    cetaa,
     mindpetal,
     mvd,
     ksidclogo,
     aptglobal,
     alethea,
+    altair,
     solidworks,
     indianoil,
     indcoil,
+    logo
   ];
   return (
     <div>

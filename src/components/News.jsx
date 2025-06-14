@@ -22,16 +22,30 @@ const newsItems = [
         date: "April 10, 2023",
         thumbnail: "/images/news3.jpg",
         summary: "We've expanded our training facilities to accommodate more members."
+    },
+    {
+        id: 4,
+        title: "New Equipment Arrived",
+        date: "March 5, 2023",
+        thumbnail: "/images/news4.jpg",
+        summary: "Check out the latest additions to our training equipment lineup."
+    },
+    {
+        id: 5,
+        title: "Community Event Success",
+        date: "February 20, 2023",
+        thumbnail: "/images/news5.jpg",
+        summary: "Thank you to everyone who participated in our community event!"
     }
 ];
 
 return (
-    <section className="news-section py-12 px-4">
+    <section className="py-12 px-4">
         <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Latest News</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 gap-8">
                 {newsItems.map((item) => (
-                    <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div key={item.id} className="bg-white min-w-[300px] rounded-lg shadow-md">
                         <img 
                             src={item.thumbnail} 
                             alt={item.title} 

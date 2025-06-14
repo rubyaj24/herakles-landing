@@ -6,7 +6,7 @@ import Team from '../components/Team.jsx'
 import Slideshow from '../components/ui/Slideshow.jsx'
 import Banner1 from '.././assets/banner1.jpg';
 import Banner2 from '.././assets/e-baja.png';
-import Banner3 from '.././assets/1.png';
+import Banner3 from '.././assets/H4.webp';
 import Sponsors from '../components/Sponsors.jsx';
 import Vehicles from '../components/Vehicles.jsx';
 import News from '../components/News.jsx';
