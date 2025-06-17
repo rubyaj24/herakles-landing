@@ -10,6 +10,8 @@ import Merchandise from './pages/Merchandise.jsx'
 import History from './pages/History.jsx'
 import TeamPage from './pages/TeamPage.jsx'
 import NotFound from './components/NotFound.jsx'
+import News from './pages/News.jsx'
+import Gallery from './pages/Gallery.jsx'
 
 // Separate component inside Router context
 const AppContent = () => {
@@ -57,6 +59,8 @@ const AppContent = () => {
           <Route path='/merchandise' element={<Merchandise />} />
           <Route path='/history' element={<History />} />
           <Route path='/team' element={<TeamPage />} />
+          <Route path='/news' element={<News />} />
+          <Route path='/gallery' element={<Gallery />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>

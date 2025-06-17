@@ -77,14 +77,14 @@ const Team = () => {
         </div>
         {/* CTA Button */}
         <div 
-                className="group flex justify-end-safe items-center p-4 gap-2 cursor-pointer transition-all duration-300 hover:scale-105"
-                onClick={handleLearnMore}
-            >
-                <span className="text-gray-300 text-md lg:text-xl font-medium p-2 group-hover:text-red-500">
-                    LEARN MORE
-                </span>
-                <MdOutlineArrowForwardIos className="text-gray-300 h-6 w-6 group-hover:text-red-500" />
-            </div>
+            className="group flex justify-end-safe items-center p-4 gap-2 cursor-pointer transition-all duration-300 hover:scale-105"
+            onClick={handleLearnMore}
+        >
+            <span className="text-gray-300 text-md lg:text-xl font-medium p-2 group-hover:text-red-500">
+                LEARN MORE
+            </span>
+            <MdOutlineArrowForwardIos className="text-gray-300 h-6 w-6 group-hover:text-red-500" />
+        </div>
     </div>
   )
 }
