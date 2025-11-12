@@ -13,7 +13,7 @@ import TeamPage from './pages/TeamPage.jsx'
 import NotFound from './components/NotFound.jsx'
 import News from './pages/News.jsx'
 import Gallery from './pages/Gallery.jsx'
-import Hbaja from './pages/hbaja.jsx'
+import Hbaja from './pages/Hbaja.jsx'
 import Ebaja from './pages/Ebaja.jsx'
 
 // Separate component inside Router context
