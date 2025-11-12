@@ -4,6 +4,10 @@ import founder from "../assets/members/founders/safwan-abdul.jpg"
 import sanjaykutty from "../assets/members/founders/sanjay-kutty.jpg"
 import vishnu from "../assets/members/founders/vishnu-cs.jpg"
 import varun from "../assets/members/founders/varun-venugopal.jpg"
+import principal from "../assets/members/mentors/principal.png"
+import sasi from "../assets/members/mentors/profsasin.jpg"
+import niju from "../assets/members/mentors/profniju.jpg"
+import execom25 from "../assets/members/execom/2025/execom.jpg"
 
 const Team = () => {
     const navigate = useNavigate();
@@ -14,19 +18,19 @@ const Team = () => {
 
     const mentors = [
         {
-            name: "John Doe",
-            role: "Lead Mentor",
-            image: "https://placehold.co/150"
+            name: "Dr. Suresh K",
+            role: "Principal",
+            image: principal
         },
         {
-            name: "Jane Smith",
-            role: "Technical Mentor",
-            image: "https://placehold.co/150"
+            name: "Prof. Niju Muhammed K",
+            role: "Assistant Professor, Mechanical Engineering",
+            image: niju
         },
         {
-            name: "Alice Johnson",
-            role: "Design Mentor",
-            image: "https://placehold.co/150"
+            name: "Prof. Sasi N",
+            role: "Assistant Professor, Mechanical Engineering",
+            image: sasi
         }
     ]
 
@@ -52,28 +56,35 @@ const Team = () => {
             image: sanjaykutty
         }
     ]
+    
   return (
     <div>
         <h1 className="text-4xl text-center my-8">OUR TEAM</h1>
-        <h2 className="text-2xl text-center my-4">Founders</h2>
+        {/* <h2 className="text-2xl text-center my-4">Founders</h2>
         <div className="flex flex-wrap gap-10 px-4 w-full justify-center space-around mx-auto">
             {founders.map((founder, index) => (
                 <div key={index} className="border p-4 rounded-lg">
-                    <img src={founder.image} alt={founder.name} className="h-50 object-cover rounded-md" />
+                    <img src={founder.image} alt={founder.name} className="h-40 object-cover rounded-md" />
                     <h3 className="text-xl font-semibold mt-2">{founder.name}</h3>
                     <p className="text-gray-600">{founder.role}</p>
                 </div>
             ))}
-        </div>
+        </div> */}
         <h2 className='text-2xl text-center my-4'>Mentors</h2>
-        <div className="flex flex-wrap gap-10 px-4 w-full justify-center space-around mx-auto">
+        <div className="flex flex-wrap gap-10 px-4 w-80 justify-center space-around mx-auto">
             {mentors.map((mentor, index) => (
-                <div key={index} className="border p-4 rounded-lg w-min-150">
-                    <img src={mentor.image} alt={mentor.name} className="w-full h-50 object-cover rounded-md" />
+                <div key={index} className="flex flex-col border p-4 rounded-lg w-100 items-center">
+                    <img src={mentor.image} alt={mentor.name} className="w-auto h-50 object-cover rounded-md" />
                     <h3 className="text-xl font-semibold mt-2">{mentor.name}</h3>
                     <p className="text-gray-600">{mentor.role}</p>
                 </div>
             ))}
+        </div>
+        <div className="my-10"><hr></hr></div>
+        
+        <div className="team">
+            <h2 className="text-2xl text-center my-4">Execom '25</h2>
+            <img src={execom25} alt="Team Image" />
         </div>
         {/* CTA Button */}
         <div 

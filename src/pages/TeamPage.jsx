@@ -5,6 +5,9 @@ import varun from "../assets/members/founders/varun-venugopal.jpg"
 import { useEffect,useState } from "react";
 import execom25 from "../assets/members/execom/2025/execom.jpg"
 import execom24 from "../assets/members/execom/2024/execom.jpg"
+import principal from "../assets/members/mentors/principal.png"
+import sasi from "../assets/members/mentors/profsasin.jpg"
+import niju from "../assets/members/mentors/profniju.jpg"
 
 const TeamPage = () => {
 
@@ -40,17 +43,17 @@ const TeamPage = () => {
         {
         name: 'Dr. Suresh K',
         role: 'Principal',
-        image: 'https://placehold.co/150'
+        image: principal
         },
         {
         name: 'Prof. Sasi N',
         role: 'Mentor',
-        image: 'https://placehold.co/150'
+        image: sasi
         },
         {
         name: 'Prof. Niju Muhammed K',
         role: 'Mentor',
-        image: 'https://placehold.co/150'
+        image: niju
         }
     ];
 

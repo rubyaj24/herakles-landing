@@ -5,6 +5,7 @@ import Loader from './components/Loader.jsx'
 import NavBar from './components/NavBar.jsx'
 import NavBarMobile from './components/NavBarMobile.jsx'
 import Footer from './components/Footer.jsx'
+import Popup from './components/ui/Popup.jsx'
 import HomePage from './pages/HomePage.jsx'
 import Merchandise from './pages/Merchandise.jsx'
 import History from './pages/History.jsx'
@@ -12,6 +13,8 @@ import TeamPage from './pages/TeamPage.jsx'
 import NotFound from './components/NotFound.jsx'
 import News from './pages/News.jsx'
 import Gallery from './pages/Gallery.jsx'
+import Hbaja from './pages/hbaja.jsx'
+import Ebaja from './pages/Ebaja.jsx'
 
 // Separate component inside Router context
 const AppContent = () => {
@@ -61,9 +64,12 @@ const AppContent = () => {
           <Route path='/team' element={<TeamPage />} />
           <Route path='/news' element={<News />} />
           <Route path='/gallery' element={<Gallery />} />
+          <Route path='/h-baja' element={<Hbaja />} />
+          <Route path='/e-baja' element={<Ebaja />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>
+      <Popup />
       <section id='contact'>
         <Footer />
       </section>
@@ -90,7 +96,7 @@ const App = () => {
   }
 
   return (
-    <Router basename="/">
+    <Router basename={import.meta.env.BASE_URL || '/'}>
       <AppContent />
     </Router>
   );

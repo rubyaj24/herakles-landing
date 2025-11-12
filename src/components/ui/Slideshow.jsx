@@ -115,7 +115,7 @@ export default Slideshow;
 //     image: '/path/to/image2.jpg', 
 //     heading: 'POWER UNLEASHED', 
 //     paragraph: 'Discover the ultimate performance machines built for champions.',
-//     cta: { text: 'EXPLORE NOW', action: '/products' }
+//     cta: { text: 'EXPLORE NOW', action: '/' }
 //   },
 //   { 
 //     image: '/path/to/image3.jpg', 

@@ -1,18 +1,13 @@
 import mbaja from '../assets/m-baja.webp';
 import ebaja from '../assets/E.webp';
 import hbaja from '../assets/H3.webp';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { MdEco, MdElectricBolt, MdOutlineArrowForwardIos } from "react-icons/md";
 import { FaOilCan } from 'react-icons/fa';
 
 const Vehicles = () => {
 
-    const navigate = useNavigate();
-    const handleCTA = (action) => {
-        if (action) {
-            navigate(action);
-        }
-    };
+    // Use <Link> for navigation (client-side) instead of programmatic navigate
 
     const models = [
         {
@@ -21,7 +16,7 @@ const Vehicles = () => {
             image: hbaja,
             description: "Hybrid technology combining the best of electric and mechanical power systems.",
             color: "green",
-            action : "/products/h-baja",
+            action : "/h-baja",
             icon : <MdEco className="text-green-500 h-10 w-10" />
         },
         {
@@ -30,7 +25,7 @@ const Vehicles = () => {
             image: ebaja,
             description: "Electric innovation meets racing excellence with zero emissions and maximum thrill.",
             color: "blue",
-            action : "/products/e-baja",
+            action : "/e-baja",
             icon : <MdElectricBolt className="text-blue-500 h-10 w-10" />
         },
         {
@@ -39,7 +34,7 @@ const Vehicles = () => {
             image: mbaja,
             description: "Powerful mechanical beast engineered for extreme terrains and unmatched performance.",
             color: "red",
-            action : "/products/m-baja",
+            action : "/m-baja",
             icon : <FaOilCan className="text-red-500 h-10 w-10" />
         },
         
@@ -79,8 +74,7 @@ return (
             {models.map((model) => {
                 const colors = getHoverColors(model.color);
                 return (
-                    <div key={model.id} className="relative h-96 rounded-xl overflow-hidden group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-                        onClick={() => handleCTA(model.action)}>
+                    <Link key={model.id} to={model.action} aria-label={`View ${model.name}`} className="relative h-96 rounded-xl overflow-hidden group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl block">
                         <img src={model.image} alt={model.name} 
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                         />
@@ -92,8 +86,7 @@ return (
                             <p className="text-gray-200 text-sm leading-relaxed transform transition-all duration-300 opacity-80 group-hover:opacity-100 group-hover:translate-y-[-4px]">
                                 {model.description}
                             </p>
-                            <div className={`flex items-center gap-2 cursor-pointer transition-all duration-300 hover:scale-105`} 
-                                onClick={() => handleCTA(model.action)}>
+                            <div className={`flex items-center gap-2 cursor-pointer transition-all duration-300 hover:scale-105`}>
                                 <h3 className={`text-gray-300 text-md lg:text-xl font-medium p-2 ${colors.textHover} transition-colors duration-300`}>
                                     LEARN MORE
                                 </h3>
@@ -105,7 +98,7 @@ return (
                         </div>
                         {/* Decorative border */}
                         <div className={`absolute inset-0 border-2 border-transparent ${colors.border} rounded-xl transition-colors duration-300`}></div>
-                    </div>
+                    </Link>
                 )
             })}
         </div>

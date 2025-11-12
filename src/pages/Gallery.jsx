@@ -66,7 +66,10 @@ const Gallery = () => {
     ];
 
   return (
-    <div className='py-12 px-4 mt-10'>
+    <div className='py-24 px-4 mt-10'>
+        <nav className="mb-4 text-sm text-gray-500">
+        <a href="/" className="hover:underline">Home</a> / <span>Gallery</span>
+      </nav>
         <h1 className='text-4xl font-bold text-center py-4'>Gallery</h1>
         <div className="w-full mx-auto mb-10">
             {execom.map((execomYear) => (

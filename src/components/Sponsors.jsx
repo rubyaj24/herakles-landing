@@ -10,6 +10,7 @@ import mindpetal from '../assets/sponsors/Mindpetal.webp'
 import cetaa from '../assets/sponsors/cetaa.webp'
 import altair from '../assets/sponsors/altair.webp'
 import logo from '../assets/sponsors/logo.jpg';
+import makita from '../assets/sponsors/makita.png'
 
 // Bmw,CETAA, MINDPETAL, mvd ,ksidc, apt global, althea, c2m , Altair, solidworks,ansys, indianoil,indian coil
 
@@ -19,6 +20,7 @@ const Sponsors = () => {
     bmw,
     cetaa,
     mindpetal,
+    makita,
     mvd,
     ksidclogo,
     aptglobal,

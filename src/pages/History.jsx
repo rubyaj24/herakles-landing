@@ -12,6 +12,9 @@ const History = () => {
 
   return (
     <div className='container mx-auto px-4 pt-40 animate-fade-in'>
+      <nav className="mb-4 text-sm text-gray-500">
+        <a href="/" className="hover:underline">Home</a> / <span>History</span>
+      </nav>
       <h1 className="text-4xl lg:text-7xl font-bold mb-6">Herakles Racing: Forging the Future, One Terrain at a Time</h1>
       <div className='relative mb-6'>
         <img src={banner} alt='Team History' className='w-full object-cover rounded-lg' />

@@ -2,6 +2,7 @@ import { FaFacebookSquare, FaInstagram, FaLinkedin, FaYoutube } from "react-icon
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaXTwitter } from 'react-icons/fa6';
 import { CgMail } from 'react-icons/cg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -33,12 +34,13 @@ const Footer = () => {
         }
     ];
 
+    // Use internal app routes (client-side) so navigation doesn't cause a full-page reload.
     const pages = [
-        { name: 'HOME', to: '/herakles-landing/home' },
-        { name: 'ABOUT', to: '/herakles-landing/about' },
-        { name: 'TEAM', to: '/herakles-landing/team' },
-        { name: 'HISTORY', to: '/herakles-landing/history' },
-        { name: 'MERCHANDISE', to: '/herakles-landing/merchandise' }
+        { name: 'HOME', to: '/' },
+        { name: 'ABOUT', to: '/about' },
+        { name: 'TEAM', to: '/team' },
+        { name: 'HISTORY', to: '/history' },
+        { name: 'MERCHANDISE', to: '/merchandise' }
     ];
 
     return (
@@ -60,9 +62,9 @@ const Footer = () => {
                 <ul className="flex flex-col md:flex-row">
                     {pages.map((page, index) => (
                         <li className="my-2 md:my-0" key={index}>
-                            <a href={`${page.to}`} className="px-4 py-2 uppercase font-medium hover:text-gray-300 transition-colors">
+                            <Link to={page.to} className="px-4 py-2 uppercase font-medium hover:text-gray-300 transition-colors">
                                 {page.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>

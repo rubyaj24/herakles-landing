@@ -53,6 +53,9 @@ const News = () => {
 
 return (
     <div className='flex justify-center pt-40'>
+        <nav className="mb-4 text-sm text-gray-500">
+        <a href="/" className="hover:underline">Home</a> / <span>News</span>
+      </nav>
         <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold mb-12 text-center">Latest News & Updates</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

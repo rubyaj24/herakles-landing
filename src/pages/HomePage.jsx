@@ -20,27 +20,29 @@ const HomePage = () => {
 
   return (
     <>
-      <section id='home' className="flex flex-col items-center justify-center lg:mt-30 animate-fade-in mx-6 border-2 rounded-lg border-gray-300 shadow-lg">
-        <Slideshow slides={[
-          { 
-            image: Banner3, 
-            heading: 'POWER UNLEASHED', 
-            paragraph: 'Discover the ultimate performance machines built for champions.',
-            cta: { text: 'EXPLORE NOW', action: '/products' }
-          },
-          { 
-            image: Banner2, 
-            heading: 'LEGACY CONTINUES', 
-            paragraph: 'Join the heritage of excellence that spans generations of racing.',
-            cta: { text: 'JOIN US', action: '/contact' }
-          },
-          { 
-            image: Banner1, 
-            heading: 'RUSH UNMATCHED', 
-            paragraph: 'Experience the thrill of speed and precision with our cutting-edge racing technology.',
-            cta: { text: 'LEARN MORE', action: '/history' }
-          }
-        ]} />
+      <section id='home' className="flex flex-col items-center justify-center lg:mt-30 animate-fade-in mx-6 p-[2px] rounded-lg bg-gradient-to-r from-gray-500 via-gray-200 to-gray-800 shadow-lg">
+        <div className="w-full rounded-[inherit] bg-white overflow-hidden">
+          <Slideshow slides={[
+            { 
+              image: Banner3, 
+              heading: 'POWER UNLEASHED', 
+              paragraph: 'Discover the ultimate performance machines built for champions.',
+              cta: { text: 'EXPLORE NOW', action: '/' }
+            },
+            { 
+              image: Banner2, 
+              heading: 'LEGACY CONTINUES', 
+              paragraph: 'Join the heritage of excellence that spans generations of racing.',
+              cta: { text: 'JOIN US', action: '/contact' }
+            },
+            { 
+              image: Banner1, 
+              heading: 'RUSH UNMATCHED', 
+              paragraph: 'Experience the thrill of speed and precision with our cutting-edge racing technology.',
+              cta: { text: 'LEARN MORE', action: '/history' }
+            }
+          ]} />
+        </div>
       </section>
 
       {/* <section id='about' className="flex flex-col items-center justify-center gap-4 m-6 border-2 rounded-lg border-gray-300 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
