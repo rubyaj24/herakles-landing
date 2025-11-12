@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import Breadcrumb from '../components/ui/Breadcrumb'
 
 // load all gallery images as URLs (eager so we get strings)
-const galleryModules = import.meta.glob('../assets/gallery/**/**/*.{webp,jpg,png,jpeg}', { eager: true, as: 'url' })
+// Updated glob options: 'as' is deprecated — use 'query' + 'import' instead
+const galleryModules = import.meta.glob('../assets/gallery/**/**/*.{webp,jpg,png,jpeg}', { eager: true, query: '?url', import: 'default' })
 
 function getImages(folderFragment) {
   // folderFragment examples: '24-25/ebaja' or '22-23'
@@ -9,6 +11,53 @@ function getImages(folderFragment) {
     .filter(([p]) => p.includes(`/gallery/${folderFragment}/`))
     .map(([, url]) => url)
     .sort()
+}
+
+// Lightweight image component: shows a skeleton until the image is in view and loaded.
+const ImageWithSkeleton = ({ src, alt, className = '' }) => {
+    const ref = useRef(null)
+    const [inView, setInView] = useState(false)
+    const [loaded, setLoaded] = useState(false)
+    const [errored, setErrored] = useState(false)
+
+    useEffect(() => {
+        if (inView) return
+        const el = ref.current
+        if (!el) return
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setInView(true)
+                    obs.disconnect()
+                }
+            })
+        }, { rootMargin: '200px' })
+        obs.observe(el)
+        return () => obs.disconnect()
+    }, [inView])
+
+    return (
+        <div ref={ref} className={`${className} overflow-hidden relative`}>
+            {!loaded && !errored && (
+                <div className={`w-full h-full bg-gray-200 dark:bg-gray-700 rounded animate-pulse`} />
+            )}
+
+            {inView && !errored && (
+                <img
+                    src={src}
+                    alt={alt}
+                    loading="lazy"
+                    onLoad={() => setLoaded(true)}
+                    onError={(e) => { setErrored(true); e.currentTarget.src = 'https://placehold.co/300x200?text=Image' }}
+                    className={`${loaded ? 'block' : 'hidden'} w-full h-full object-cover rounded`}
+                />
+            )}
+
+            {errored && (
+                <div className="w-full h-full bg-gray-300 flex items-center justify-center text-sm text-gray-600 rounded">Image unavailable</div>
+            )}
+        </div>
+    )
 }
 
 const Gallery = () => {
@@ -44,9 +93,7 @@ const Gallery = () => {
 
   return (
     <div className='py-24 px-4 mt-10'>
-        <nav className="mb-4 text-sm text-gray-500">
-        <a href="/" className="hover:underline">Home</a> / <span>Gallery</span>
-      </nav>
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Gallery' }]} />
         <h1 className='text-4xl font-bold text-center py-4'>Gallery</h1>
         <div className="w-full mx-auto mb-10">
             {execom.map((execomYear) => (
@@ -65,12 +112,11 @@ const Gallery = () => {
                     <div className="p-4">
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 auto-rows-auto">
                             {execomYear.images && execomYear.images.map((image, index) => (
-                                <img 
-                                    key={index} 
-                                    src={image} 
-                                    alt={`Execom ${execomYear.year} Image ${index + 1}`} 
-                                    className="w-full h-full max-h-100 object-cover rounded"
-                                    onError={(e) => {e.target.src = "https://placehold.co/150?text=Execom"}}
+                                <ImageWithSkeleton
+                                    key={index}
+                                    src={image}
+                                    alt={`Execom ${execomYear.year} Image ${index + 1}`}
+                                    className="w-full h-full max-h-100"
                                 />
                             ))}
                         </div>

@@ -4,11 +4,11 @@ import { FaX } from 'react-icons/fa6'
 
 /**
  * Donation popup that appears at the bottom of the screen.
- * - auto-shows after `delay` ms (default 5s)
+ * - auto-shows after `delay` ms (default 10s)
  * - closing persists in localStorage (no expiry)
  * - `donateUrl` opens in a new tab
  */
-const Popup = ({ delay = 5000, donateUrl = 'https://gofund.me/42fa71eb9' }) => {
+const Popup = ({ delay = 10000, donateUrl = 'https://gofund.me/42fa71eb9' }) => {
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {

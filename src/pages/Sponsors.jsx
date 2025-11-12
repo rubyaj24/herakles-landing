@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Partners from "../components/Sponsors";
+import Breadcrumb from '../components/ui/Breadcrumb';
 
 const Sponsors = () => {
 
@@ -12,9 +13,7 @@ const Sponsors = () => {
 
     return (
         <div className="container mx-auto flex flex-col pt-30 px-6 animate-fade-in">
-            <nav className="mb-4 text-sm text-gray-500">
-                <a href="/" className="hover:underline">Home</a> / <span>Sponsors</span>
-            </nav>
+            <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Sponsors' }]} />
             {/* <h1 className="text-4xl font-bold mb-8">Our Sponsors</h1> */}
             <p className="text-lg text-gray-700">We are proudly supported by our esteemed sponsors.</p>
             {/* Add sponsor logos and details here */}

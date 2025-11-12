@@ -4,6 +4,7 @@ import tshirt from "../assets/merch/tshirt.webp"
 import cap from "../assets/merch/cap.webp"
 import jacket from "../assets/merch/jacket.webp"
 import threedmodel from "../assets/merch/3dmodel.jpg"
+import Breadcrumb from '../components/ui/Breadcrumb'
 
 const Merchandise = () => {
 
@@ -45,9 +46,7 @@ const Merchandise = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 mt-20">
-      <nav className="mb-4 text-sm text-gray-500">
-        <a href="/" className="hover:underline">Home</a> / <span>Merchandise</span>
-      </nav>
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Merchandise' }]} />
       <h1 className="text-4xl font-bold">HERAKLES RACING MERCH</h1>
       <span className="text-lg text-gray-500">
         Precision. Grit. Legacy.

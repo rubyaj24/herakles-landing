@@ -1,3 +1,5 @@
+import Breadcrumb from '../components/ui/Breadcrumb'
+
 const News = () => {
 
     const newsItems = [
@@ -54,9 +56,7 @@ const News = () => {
 return (
     <div className="pt-30">
         <div className="container mx-auto px-4">
-            <nav className="mb-4 text-sm text-gray-500">
-                <a href="/" className="hover:underline">Home</a> / <span>News</span>
-            </nav>
+            <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'News' }]} />
 
             <h2 className="text-4xl font-bold mb-12 text-center">Latest News & Updates</h2>
 

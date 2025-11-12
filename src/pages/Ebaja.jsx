@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import hbaja from '../assets/h-baja.png';
+import Breadcrumb from '../components/ui/Breadcrumb';
 
 const Ebaja = () => {
 
@@ -12,9 +13,7 @@ const Ebaja = () => {
 
   return (
     <main role="main" className='container mx-auto px-4 pt-36 lg:pt-40 animate-fade-in'>
-      <nav className="mb-4 text-sm text-gray-500">
-        <a href="/" className="hover:underline">Home</a> / <span>E Baja</span>
-      </nav>
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'E Baja' }]} />
 
       <section className="mb-6">
         <div className='relative rounded-lg overflow-hidden'>

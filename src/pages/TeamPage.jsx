@@ -8,6 +8,7 @@ import execom24 from "../assets/members/execom/2024/execom.jpg"
 import principal from "../assets/members/mentors/principal.png"
 import sasi from "../assets/members/mentors/profsasin.jpg"
 import niju from "../assets/members/mentors/profniju.jpg"
+import Breadcrumb from '../components/ui/Breadcrumb'
 
 const TeamPage = () => {
 
@@ -88,9 +89,7 @@ const TeamPage = () => {
 
     return (
         <div className='container mx-auto px-4 pt-30 animate-fade-in'>
-            <nav className="mb-4 text-sm text-gray-500">
-        <a href="/" className="hover:underline">Home</a> / <span>Team</span>
-      </nav>
+            <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Team' }]} />
             <h1 className="text-4xl text-center my-8">OUR TEAM</h1>
             <h2 className="text-2xl text-center my-4">Founders</h2>
             <div className="flex flex-wrap gap-10 px-4 w-full justify-center space-around mx-auto">
