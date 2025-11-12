@@ -59,7 +59,7 @@ const Team = () => {
         <div className="flex flex-wrap gap-10 px-4 w-full justify-center space-around mx-auto">
             {founders.map((founder, index) => (
                 <div key={index} className="border p-4 rounded-lg">
-                    <img src={founder.image} alt={founder.name} className="h-100 object-cover rounded-md" />
+                    <img src={founder.image} alt={founder.name} className="h-50 object-cover rounded-md" />
                     <h3 className="text-xl font-semibold mt-2">{founder.name}</h3>
                     <p className="text-gray-600">{founder.role}</p>
                 </div>
@@ -69,7 +69,7 @@ const Team = () => {
         <div className="flex flex-wrap gap-10 px-4 w-full justify-center space-around mx-auto">
             {mentors.map((mentor, index) => (
                 <div key={index} className="border p-4 rounded-lg w-min-150">
-                    <img src={mentor.image} alt={mentor.name} className="w-full h-32 object-cover rounded-md" />
+                    <img src={mentor.image} alt={mentor.name} className="w-full h-50 object-cover rounded-md" />
                     <h3 className="text-xl font-semibold mt-2">{mentor.name}</h3>
                     <p className="text-gray-600">{mentor.role}</p>
                 </div>
