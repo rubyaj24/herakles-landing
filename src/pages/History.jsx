@@ -11,7 +11,7 @@ const History = () => {
       }, []);
 
   return (
-    <div className='container mx-auto px-4 pt-40 animate-fade-in'>
+    <div className='container mx-auto px-4 pt-30 animate-fade-in'>
       <nav className="mb-4 text-sm text-gray-500">
         <a href="/" className="hover:underline">Home</a> / <span>History</span>
       </nav>

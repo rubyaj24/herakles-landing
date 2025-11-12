@@ -1,5 +1,16 @@
 import { useEffect, useState } from 'react'
 
+// load all gallery images as URLs (eager so we get strings)
+const galleryModules = import.meta.glob('../assets/gallery/**/**/*.{webp,jpg,png,jpeg}', { eager: true, as: 'url' })
+
+function getImages(folderFragment) {
+  // folderFragment examples: '24-25/ebaja' or '22-23'
+  return Object.entries(galleryModules)
+    .filter(([p]) => p.includes(`/gallery/${folderFragment}/`))
+    .map(([, url]) => url)
+    .sort()
+}
+
 const Gallery = () => {
 
     const [openYear, setOpenYear] = useState(null);
@@ -15,53 +26,19 @@ const Gallery = () => {
     const execom = [
         {
             year: '24-25',
-            images : [
-                'src/assets/gallery/24-25/ebaja/1.webp',
-                'src/assets/gallery/24-25/ebaja/2.webp',
-                'src/assets/gallery/24-25/ebaja/3.webp',
-                'src/assets/gallery/24-25/ebaja/4.webp',
-                'src/assets/gallery/24-25/hbaja/1.webp',
-                'src/assets/gallery/24-25/hbaja/2.webp',
-                'src/assets/gallery/24-25/hbaja/3.webp',
-                'src/assets/gallery/24-25/hbaja/4.webp',
-                'src/assets/gallery/24-25/hbaja/5.webp',
-                'src/assets/gallery/24-25/hbaja/6.webp',
-                'src/assets/gallery/24-25/hbaja/7.webp',
-                'src/assets/gallery/24-25/hbaja/8.webp',
-            ]
-            
+            images : getImages('24-25/ebaja').concat(getImages('24-25/hbaja'))
         },
         {
             year: '22-23',
-            images: [
-                'src/assets/gallery/22-23/1.webp',
-                'src/assets/gallery/22-23/2.webp',
-                'src/assets/gallery/22-23/3.webp',
-                'src/assets/gallery/22-23/4.webp',
-            ]
+            images: getImages('22-23')
         },
         {
             year: '19-20',
-            images: [
-                'src/assets/gallery/19-20/1.webp',
-                'src/assets/gallery/19-20/2.webp',
-                'src/assets/gallery/19-20/3.webp',
-                'src/assets/gallery/19-20/4.webp',
-                'src/assets/gallery/19-20/5.webp',
-                'src/assets/gallery/19-20/6.webp',
-                'src/assets/gallery/19-20/7.webp',
-                'src/assets/gallery/19-20/8.webp',
-            ]
+            images: getImages('19-20')
         },
         {
             year: '18-19',
-            images: [
-                'src/assets/gallery/18-19/1.webp',
-                'src/assets/gallery/18-19/2.webp',
-                'src/assets/gallery/18-19/3.webp',
-                'src/assets/gallery/18-19/4.webp',
-                'src/assets/gallery/18-19/5.webp'
-            ]
+            images: getImages('18-19')
         }
     ];
 

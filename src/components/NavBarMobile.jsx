@@ -25,13 +25,13 @@ const NavBarMobile = () => {
     {'name':'NEWS', 'to':'/news'},
     {'name':'GALLERY', 'to':'/gallery'},
     {'name':'HISTORY', 'to':'/history'},
-    {'name':'PARTNERS', 'to':'/partners'},
+    {'name':'PARTNERS', 'to':'/sponsors'},
     {'name':'CONTACT', 'to':'/contact'}
   ];
 
   return (
     <>
-      <nav className="flex z-30 bg-gradient-to-b from-black/100 via-black/80 to-black/0 text-white px-6 items-center justify-between relative">
+      <nav className="flex z-50 bg-gradient-to-b from-black/100 via-black/80 to-black/0 text-white px-6 items-center justify-between relative">
         <button 
           className="text-sm font-medium hover:text-red-500 hover:scale-110  transition-all duration-300"
           aria-label="Toggle Menu" 
@@ -49,13 +49,13 @@ const NavBarMobile = () => {
       {/* Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40" 
+          className="fixed inset-0 bg-black/50 z-50" 
           onClick={toggleMenu}
         ></div>
       )}
 
       {/* Drawer */}
-      <div className={`fixed inset-y-0 left-0 w-64 bg-black/95 backdrop-blur-sm transform transition-transform duration-300 ease-in-out z-50 ${
+      <div className={`fixed inset-y-0 left-0 w-64 bg-black/95 backdrop-blur-sm transform transition-transform duration-300 ease-in-out z-60 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
         <div className="flex justify-between items-center p-6 border-b border-gray-700">

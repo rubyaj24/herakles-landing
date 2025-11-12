@@ -15,6 +15,7 @@ import News from './pages/News.jsx'
 import Gallery from './pages/Gallery.jsx'
 import Hbaja from './pages/Hbaja.jsx'
 import Ebaja from './pages/Ebaja.jsx'
+import Sponsors from './pages/Sponsors.jsx'
 
 // Separate component inside Router context
 const AppContent = () => {
@@ -60,6 +61,7 @@ const AppContent = () => {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/merchandise' element={<Merchandise />} />
+          <Route path='/sponsors' element={<Sponsors />} />
           <Route path='/history' element={<History />} />
           <Route path='/team' element={<TeamPage />} />
           <Route path='/news' element={<News />} />

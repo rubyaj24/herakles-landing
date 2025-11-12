@@ -11,8 +11,9 @@ const NavBar = () => {
     {'name':'NEWS', 'to':'/news'},
     {'name':'GALLERY', 'to':'/gallery'},
     {'name':'HISTORY', 'to':'/history'},
-    {'name':'PARTNERS', 'to':'/partners'},
-    {'name':'CONTACT', 'to':'/contact'}
+    {'name':'SPONSORS', 'to':'/sponsors'},
+    {'name':'CONTACT', 'to':'/contact'},
+    {'name':'MERCH', 'to':'/merchandise'}
 
   ];
   return (

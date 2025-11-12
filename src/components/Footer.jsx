@@ -46,6 +46,7 @@ const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white py-8">
             <p className="text-center text-gray-400 mb-6">&copy; {new Date().getFullYear()} HERAKLES RACING. ALL RIGHTS RESERVED.</p>
+            <div className="flex flex-col lg:flex-row space-around lg:justify-around max-w-6xl gap-10 mx-auto">
             {/* Contact Information */}
             <div className='px-4 mb-6 text-gray-200'>
                 <p className='font-bold'>Herakles CET</p>
@@ -59,9 +60,9 @@ const Footer = () => {
             </div>
             {/* Tabs */}
             <div className="flex mb-6">
-                <ul className="flex flex-col md:flex-row">
+                <ul className="flex flex-col">
                     {pages.map((page, index) => (
-                        <li className="my-2 md:my-0" key={index}>
+                        <li className="my-2" key={index}>
                             <Link to={page.to} className="px-4 py-2 uppercase font-medium hover:text-gray-300 transition-colors">
                                 {page.name}
                             </Link>
@@ -71,9 +72,9 @@ const Footer = () => {
             </div>
             {/* Social links */}
             <div className="flex">
-                <ul className="flex flex-col md:flex-row md:justify-around w-full">
+                <ul className="flex flex-col">
                     {socialLinks.map((link, index) => (
-                        <li className="my-2 md:my-0" key={index}>
+                        <li className="my-2" key={index}>
                             <a href={link.url} target="_blank" rel="noopener noreferrer" className="px-4 py-2 uppercase font-medium hover:text-gray-300 transition-colors">
                                 {link.icon}
                                 {link.name}
@@ -81,6 +82,7 @@ const Footer = () => {
                         </li>
                     ))}
                 </ul>
+            </div>
             </div>
     </footer>
 )

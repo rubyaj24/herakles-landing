@@ -87,7 +87,10 @@ const TeamPage = () => {
     };
 
     return (
-        <div className='container mx-auto px-4 pt-20 animate-fade-in'>
+        <div className='container mx-auto px-4 pt-30 animate-fade-in'>
+            <nav className="mb-4 text-sm text-gray-500">
+        <a href="/" className="hover:underline">Home</a> / <span>Team</span>
+      </nav>
             <h1 className="text-4xl text-center my-8">OUR TEAM</h1>
             <h2 className="text-2xl text-center my-4">Founders</h2>
             <div className="flex flex-wrap gap-10 px-4 w-full justify-center space-around mx-auto">
