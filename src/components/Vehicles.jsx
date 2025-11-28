@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { MdEco, MdElectricBolt, MdOutlineArrowForwardIos } from "react-icons/md";
 import { FaOilCan } from 'react-icons/fa';
 
-const Vehicles = () => {
+const Vehicles = ({ isMobile = false }) => {
 
     // Use <Link> for navigation (client-side) instead of programmatic navigate
 
@@ -39,6 +39,7 @@ const Vehicles = () => {
         },
         
     ]
+
 
     const getHoverColors = (color) => {
         switch(color) {
@@ -92,7 +93,7 @@ return (
                                 </h3>
                                 <MdOutlineArrowForwardIos className={`text-gray-300 h-6 w-6 ${colors.textHover} transition-colors duration-300`} />
                             </div>
-                            <div className="opacity-0 group-hover:opacity-100 absolute bottom-4 right-4">
+                            <div className={`${isMobile ? 'absolute bottom-4 right-4 opacity-100' : 'opacity-0 group-hover:opacity-100 absolute bottom-4 right-4'}`}>
                                 {model.icon}
                             </div>
                         </div>

@@ -21,6 +21,7 @@ const NavBarMobile = () => {
   const menuItems = [
     {'name':'HOME', 'to':'/'},
     {'name':'ABOUT', 'to':'/about'},
+    {'name':'COLLEGE', 'to':'https://cet.ac.in/'},
     {'name':'TEAM', 'to':'/team'},
     {'name':'NEWS', 'to':'/news'},
     {'name':'GALLERY', 'to':'/gallery'},

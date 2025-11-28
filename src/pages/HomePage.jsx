@@ -11,7 +11,7 @@ import Sponsors from '../components/Sponsors.jsx';
 import Vehicles from '../components/Vehicles.jsx';
 import News from '../components/News.jsx';
 
-const HomePage = () => {
+const HomePage = ({ isMobile }) => {
 
   useEffect(() => {
       document.title = "Home | Herakles CET";
@@ -54,7 +54,7 @@ const HomePage = () => {
       </section> */}
 
       <div className='flex flex-col items-center justify-center gap-4 my-6 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]'>
-        <Vehicles />
+        <Vehicles isMobile={isMobile} />
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4 m-6 animate-rise-in scroll-smooth [animation-timeline:view()] [animation-range:0%_cover_40%]">
