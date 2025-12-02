@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heraklesracingcet.ac.in/sitemap.xml
