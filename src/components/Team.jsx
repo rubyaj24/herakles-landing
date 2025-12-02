@@ -71,14 +71,37 @@ const Team = () => {
             ))}
         </div> */}
         <h2 className='text-2xl text-center my-4'>Mentors</h2>
-        <div className="flex flex-wrap gap-10 px-4 w-80 justify-center space-around mx-auto">
-            {mentors.map((mentor, index) => (
-                <div key={index} className="flex flex-col border p-4 rounded-lg w-100 items-center">
-                    <img src={mentor.image} alt={mentor.name} className="w-auto h-50 object-cover rounded-md" />
-                    <h3 className="text-xl font-semibold mt-2">{mentor.name}</h3>
-                    <p className="text-gray-600">{mentor.role}</p>
+        <div className="flex flex-col items-center gap-8 px-4 mx-auto max-w-4xl">
+            {/* Principal at the top */}
+            <div className="flex justify-center">
+                <div className="flex flex-col border p-4 rounded-lg w-64 items-center shadow-lg">
+                    <img src={mentors[0].image} alt={mentors[0].name} className="w-32 h-32 object-cover object-top rounded-full" />
+                    <h3 className="text-xl font-semibold mt-3 text-center">{mentors[0].name}</h3>
+                    <p className="text-gray-600 text-center text-sm">{mentors[0].role}</p>
                 </div>
-            ))}
+            </div>
+            
+            {/* Connection line */}
+            <div className="hidden md:flex flex-col items-center">
+                <div className="w-[2px] h-8 bg-gray-600"></div>
+                <div className="w-32 h-px bg-gray-600"></div>
+                <div className="flex">
+                    <div className="w-16 h-px bg-gray-600"></div>
+                    {/* <div className="w-px h-8 bg-gray-600"></div> */}
+                    <div className="w-16 h-px bg-gray-600"></div>
+                </div>
+            </div>
+            
+            {/* Two professors at the bottom */}
+            <div className="flex flex-wrap gap-12 justify-center">
+                {mentors.slice(1).map((mentor, index) => (
+                    <div key={index + 1} className="flex flex-col border p-4 rounded-lg w-64 items-center shadow-lg">
+                        <img src={mentor.image} alt={mentor.name} className="w-28 h-28 object-cover rounded-full" />
+                        <h3 className="text-lg font-semibold mt-3 text-center">{mentor.name}</h3>
+                        <p className="text-gray-600 text-center text-sm">{mentor.role}</p>
+                    </div>
+                ))}
+            </div>
         </div>
         <div className="my-10"><hr></hr></div>
         

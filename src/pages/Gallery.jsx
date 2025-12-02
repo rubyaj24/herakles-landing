@@ -1,6 +1,19 @@
 import { useEffect, useState, useRef } from 'react'
 import Breadcrumb from '../components/ui/Breadcrumb'
 
+// Simple skeleton component for images
+const ImageSkeleton = ({ className = '' }) => {
+    return (
+        <div className={`animate-pulse bg-gray-200 dark:bg-gray-700 rounded ${className}`}>
+            <div className="w-full h-full flex items-center justify-center">
+                <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+            </div>
+        </div>
+    )
+}
+
 // load all gallery images as URLs (eager so we get strings)
 // Updated glob options: 'as' is deprecated — use 'query' + 'import' instead
 const galleryModules = import.meta.glob('../assets/gallery/**/**/*.{webp,jpg,png,jpeg}', { eager: true, query: '?url', import: 'default' })
@@ -37,11 +50,13 @@ const ImageWithSkeleton = ({ src, alt, className = '' }) => {
     }, [inView])
 
     return (
-        <div ref={ref} className={`${className} overflow-hidden relative`}>
+        <div ref={ref} className={`${className} overflow-hidden relative aspect-square`}>
+            {/* Skeleton loader */}
             {!loaded && !errored && (
-                <div className={`w-full h-full bg-gray-200 dark:bg-gray-700 rounded animate-pulse`} />
+                <ImageSkeleton className="w-full h-full absolute inset-0" />
             )}
 
+            {/* Actual image */}
             {inView && !errored && (
                 <img
                     src={src}
@@ -49,12 +64,20 @@ const ImageWithSkeleton = ({ src, alt, className = '' }) => {
                     loading="lazy"
                     onLoad={() => setLoaded(true)}
                     onError={(e) => { setErrored(true); e.currentTarget.src = 'https://placehold.co/300x200?text=Image' }}
-                    className={`${loaded ? 'block' : 'hidden'} w-full h-full object-cover rounded`}
+                    className={`w-full h-full object-cover rounded absolute inset-0 transition-opacity duration-500 ${
+                        loaded ? 'opacity-100' : 'opacity-0'
+                    }`}
                 />
             )}
 
+            {/* Error state */}
             {errored && (
-                <div className="w-full h-full bg-gray-300 flex items-center justify-center text-sm text-gray-600 rounded">Image unavailable</div>
+                <div className="w-full h-full bg-gray-300 flex flex-col items-center justify-center text-sm text-gray-600 rounded absolute inset-0">
+                    <svg className="w-8 h-8 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Image unavailable</span>
+                </div>
             )}
         </div>
     )
@@ -110,13 +133,13 @@ const Gallery = () => {
                         Execom {execomYear.year}
                     </summary>
                     <div className="p-4">
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 auto-rows-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {execomYear.images && execomYear.images.map((image, index) => (
                                 <ImageWithSkeleton
                                     key={index}
                                     src={image}
                                     alt={`Execom ${execomYear.year} Image ${index + 1}`}
-                                    className="w-full h-full max-h-100"
+                                    className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                                 />
                             ))}
                         </div>

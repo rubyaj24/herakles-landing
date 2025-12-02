@@ -1,8 +1,12 @@
 import { useEffect } from 'react'
 import banner from '../assets/logo render.png'
 import ebaja from '../assets/e-baja.png'
+import ebaja2 from '../assets/gallery/24-25/ebaja/4.webp'
+import hbaja from '../assets/H3.webp'
+import hbaja2 from '../assets/14.png'
 import mbaja from '../assets/m-baja.JPG'
 import Breadcrumb from '../components/ui/Breadcrumb'
+import Hbaja from './Hbaja'
 
 const History = () => {
 
@@ -34,7 +38,7 @@ const History = () => {
         was born from this very spirit: to design machines that conquer terrain, challenge convention, 
         and shape the future of mobility. What began as a student initiative has now grown into a movement 
         of excellence, resilience, and purposeful innovation — across every terrain, and through every evolution.</p>
-      <img src='https://placehold.co/600x400' alt='Historical Image' className='w-full h-64 object-cover rounded-lg mb-6' />
+      {/* <img src='https://placehold.co/600x400' alt='Historical Image' className='w-full h-64 object-cover rounded-lg mb-6' /> */}
       <p className='hidden my-4 leading-relaxed'>Join us as we look back at our milestones, the evolution of our designs, and the spirit that drives us forward.</p>
 
       {/* M_BAJA */}
@@ -89,7 +93,7 @@ const History = () => {
         it was a reflection of who we were becoming: engineers with a vision, grounded in purpose.
       </p>
       <h2 className='text-3xl font-semibold my-6'>At the Summit of Performance</h2>
-      <img src='https://placehold.co/600x400' alt='2024 Prototype' className='w-full h-64 object-cover rounded-lg mb-6' />
+      <img src={ebaja2} alt='2024 Prototype' className='w-full h-64 object-cover rounded-lg mb-6' />
       <p className='my-4 leading-relaxed'>What followed was not just growth — it was refinement. 
         Through tireless design iterations, simulation cycles, and testing trials, we returned to 
         SAE eBAJA in 2024 with a machine that reflected three years of learning, failure, and precision. 
@@ -108,7 +112,7 @@ const History = () => {
 
       {/* H-BAJA */}
       <h2 className='text-3xl font-semibold my-6'>Beyond the Horizon</h2>
-      <img src='https://placehold.co/600x400' alt='Future Vision' className='w-full h-64 object-cover rounded-lg mb-6' />
+      <img src={hbaja} alt='Future Vision' className='w-full h-64 object-cover rounded-lg mb-6' />
       <p className='my-4 leading-relaxed'>But true innovation never settles. The next frontier was already in sight — 
         and it wasn’t electric. It was cleaner, more powerful, and far more complex. In 2025, Herakles Racing entered 
         H-BAJA, the hydrogen fuel-based vertical of SAE BAJA India. With it, we introduced the world’s 
@@ -125,7 +129,7 @@ const History = () => {
         engineering teams can achieve when passion meets purpose, and technology meets impact.
       </p>
       <h2 className='text-3xl font-semibold my-6'>One Team. Infinite Terrain.</h2>
-      <img src='https://placehold.co/600x400' alt='Team Legacy' className='w-full h-64 object-cover rounded-lg mb-6' />
+      <img src={hbaja2} alt='Team Legacy' className='w-full h-64 object-cover rounded-lg mb-6' />
       <p className='my-4 leading-relaxed'>From petrol to electric to hydrogen, our journey has never been about staying ahead — 
         it’s been about moving forward, with intention. Every pivot has been powered by something more than machines: the desire 
         to leave every terrain better than we found it. Herakles Racing is not just a team; it’s a legacy in motion — built on 
