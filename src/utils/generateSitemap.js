@@ -1,5 +1,5 @@
 export const generateSitemap = () => {
-  const baseUrl = 'https://heraklesracingcet.ac.in';
+  const baseUrl = 'https://heraklesracing.cet.ac.in';
   const routes = [
     { path: '/', priority: '1.0', changefreq: 'weekly' },
     { path: '/team', priority: '0.8', changefreq: 'monthly' },

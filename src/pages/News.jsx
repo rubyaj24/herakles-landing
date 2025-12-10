@@ -61,7 +61,7 @@ return (
             title="News | Herakles Racing - Updates & Press"
             description="Latest news, press and updates from Herakles Racing CET — competition results, features and announcements."
             keywords="Herakles Racing news, BAJA updates, CET press"
-            url={typeof window !== 'undefined' ? window.location.origin + '/news' : 'https://heraklesracingcet.ac.in/news'}
+            url={typeof window !== 'undefined' ? window.location.origin + '/news' : 'https://heraklesracing.cet.ac.in/news'}
         />
         <div className="pt-30">
         <div className="container mx-auto px-4">
@@ -91,6 +91,7 @@ return (
             </div>
         </div>
     </div>
+    </>
 )
 }
 

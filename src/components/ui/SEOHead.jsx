@@ -17,7 +17,7 @@ const SEOHead = ({
   description = 'Herakles Racing from College of Engineering Trivandrum - student BAJA racing team',
   keywords = 'BAJA racing, CET, Herakles Racing',
   image = '/logo.svg',
-  url = typeof window !== 'undefined' ? window.location.href : 'https://heraklesracingcet.ac.in',
+  url = typeof window !== 'undefined' ? window.location.href : 'https://heraklesracing.cet.ac.in',
   jsonLd = null
 }) => {
   useEffect(() => {
