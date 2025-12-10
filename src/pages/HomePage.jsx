@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import HeroSection from '../components/HeroSection.jsx'
+import SEOHead from '../components/ui/SEOHead'
 import About from '../components/About.jsx'
 import College from '../components/College.jsx'
 import Team from '../components/Team.jsx'
@@ -20,6 +21,12 @@ const HomePage = ({ isMobile }) => {
 
   return (
     <>
+      <SEOHead
+        title="Home | Herakles Racing - CET"
+        description="Herakles Racing from College of Engineering Trivandrum — student BAJA racing team building electric, hydrogen and mechanical ATVs."
+        keywords="Herakles Racing, BAJA, CET, electric ATV, hydrogen ATV"
+        url={typeof window !== 'undefined' ? window.location.origin + '/' : 'https://heraklesracingcet.ac.in/'}
+      />
       <section id='home' className="flex flex-col items-center justify-center lg:mt-30 animate-fade-in mx-6 p-[2px] rounded-lg bg-gradient-to-r from-gray-500 via-gray-200 to-gray-800 shadow-lg">
         <div className="w-full rounded-[inherit] bg-white overflow-hidden">
           <Slideshow slides={[

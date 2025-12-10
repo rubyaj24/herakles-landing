@@ -1,5 +1,6 @@
 import Breadcrumb from '../components/ui/Breadcrumb'
 import banner from '../assets/logo render.png'
+import SEOHead from '../components/ui/SEOHead'
 
 const News = () => {
 
@@ -55,7 +56,14 @@ const News = () => {
     ];
 
 return (
-    <div className="pt-30">
+        <>
+        <SEOHead
+            title="News | Herakles Racing - Updates & Press"
+            description="Latest news, press and updates from Herakles Racing CET — competition results, features and announcements."
+            keywords="Herakles Racing news, BAJA updates, CET press"
+            url={typeof window !== 'undefined' ? window.location.origin + '/news' : 'https://heraklesracingcet.ac.in/news'}
+        />
+        <div className="pt-30">
         <div className="container mx-auto px-4">
             <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'News' }]} />
 
